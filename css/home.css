@@ -44,6 +44,8 @@
     font-size: 0.65rem;
     letter-spacing: 0.18em;
     opacity: 0.35;
+    text-transform: uppercase;
+    font-weight: 500;
 }
 
 .fade-up {
