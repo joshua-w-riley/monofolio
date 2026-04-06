@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="57x57" href="./assets/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./assets/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./assets/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./assets/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./assets/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./assets/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./assets/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./assets/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./assets/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./assets/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
+    <link rel="manifest" href="./assets/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="./assets/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <title>Portfolio</title>
+    <meta name="description" content="Joshua W. Riley — Full-Stack Developer & Systems Analyst Portfolio." />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Joshua W. Riley — Portfolio" />
+    <meta property="og:description"
+        content="Welcome to my portfolio! I am a Full-Stack Developer and Systems Analyst." />
+    <!-- <meta property="og:image" content="https://github.com/joshua-w-riley" /> -->
+    <!-- <meta property="og:url" content=" /> -->
+    <!-- 1️⃣ Third-party libraries -->
+    <link rel="stylesheet" href="./LoadingBar/loading-bar.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <!-- 2️⃣ Base / Global styles -->
+    <link rel="stylesheet" href="./css/index.css" />
+    <!-- 3️⃣ Page sections -->
+    <link rel="stylesheet" href="./css/home.css" />
+    <link rel="stylesheet" href="./css/about.css" />
+    <link rel="stylesheet" href="./css/contact.css" />
+    <!-- 4️⃣ Loader override -->
+    <link rel="stylesheet" href="./LoadingBar/loading-bar-time.css" />
+</head>
+
+<body>
+    <!-- Loader -->
+    <div id="loader">
+        <div id="loaderBar" class="ldBar" data-preset="text" data-value="0" data-value-label="none"></div>
+    </div>
+    <div class="content-container">
+        <!-- Title -->
+        <header class="main-content">
+            <h1 class="header name">Joshua W. Riley</h1>
+            <h4 class="sub-header description">Full-Stack Developer · Systems Analyst</h4>
+        </header>
+        <div class="sub-content">
+            <!-- Navigation -->
+            <nav class="navbar">
+                <ul class="sub-navbar">
+                    <li><a href="#home" class="nav-link active" data-page="home"><span>Home</span></a></li>
+                    <li><a href="#about" class="nav-link" data-page="about"><span>About</span></a></li>
+                    <li><a href="#projects" class="nav-link" data-page="projects"><span>Projects</span></a></li>
+                    <li><a href="#contact" class="nav-link" data-page="contact"><span>Contact</span></a></li>
+                </ul>
+            </nav>
+            <main class="subsection2">
+                <section id="home" class="page">
+                    <div class="home-container">
+                        <div></div>
+                        <p class="home-text fade-up" style="animation-delay: 80ms;">
+                            I design and build structured systems focusing on user experience and operational
+                            clarity.
+                        </p>
+                    </div>
+                </section>
+                <!-- About Section -->
+                <section id="about" class="page about-page" hidden>
+                    <div class="about-page-inner">
+                        <div class="about-content">
+                            <div class="about-left">
+                                <p class="about-label">About</p>
+                                <h1 class="about-hero fade-up">
+                                    I build systems<br>
+                                    that are visually <br />
+                                    restrained.
+                                </h1>
+                                <div class="about-body">
+                                    <p class="fade-up" style="animation-delay: 80ms;">
+                                        Most of the problems I’m drawn to start messy — legacy logic, unreliable
+                                        data, unclear ownership, bloated
+                                        interfaces.
+                                    </p>
+                                    <p class="fade-up tight" style="animation-delay: 160ms;">
+                                        I focus on simplifying that.
+                                    </p>
+                                    <p class="closing fade-up" style="animation-delay: 240ms;">
+                                        Over-engineering is noisy.<br>
+                                        Ignoring UX is worse.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- End About Section -->
+                <!-- Projects Section -->
+                <section id="projects" class="page" hidden>Projects content here</section>
+                <!-- End Project Section -->
+                <!-- Contact Section -->
+                <section id="contact" class="page" hidden>
+                    <div class="contact-block">
+                        <p class="contact-heading">Contact</p>
+                        <div class="contact-links">
+                            <a rel="noopener noreferrer" onclick="sendEmail()"
+                                href="mailto:joshua.studio@proton.me">email</a>
+                            <a rel="noopener noreferrer" href="https://www.linkedin.com/in/joshua-w-riley/"
+                                target="_blank">linkedin</a>
+                            <a rel="noopener noreferrer" href="https://github.com/joshua-w-riley"
+                                target="_blank">github</a>
+                            <a href="./source/Joshua W. Riley - Resume.pdf" download>resume</a>
+                        </div>
+                    </div>
+                </section>
+                <!-- End Contact Section -->
+            </main>
+        </div>
+    </div>
+    <script src="./LoadingBar/loading-bar.js"></script>
+    <script src="./LoadingBar/loading-bar-time.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/sendEmail.js"></script>
+</body>
+
+</html>

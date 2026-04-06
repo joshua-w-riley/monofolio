@@ -1,0 +1,41 @@
+#loader {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  background: transparent;
+  backdrop-filter: blur(10px) grayscale(100%);
+  -webkit-backdrop-filter: blur(10px) grayscale(100%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+#loader.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+#loader:not(.active) {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.ldBar path.mainline {
+  /* stroke-linecap: round; */
+  font-size: 1.5rem;
+
+}
+
+.ldBar path.baseline {
+  /* font-size: 10rem; */
+    stroke-width: 100px;
+    stroke: #f1f2f3;
+    stroke-linecap: round;
+  }
+
+  .ldBar-label {
+  display: none !important;
+}
