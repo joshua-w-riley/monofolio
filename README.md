@@ -3,7 +3,7 @@
 Minimal frontend-focused portfolio built with HTML, CSS, and vanilla JS.
 
 ## Live Site
-https://yourusername.github.io/your-repo/
+https://github.com/joshua-w-riley/monofolio
 
 ## Tech
 - HTML5
