@@ -1,0 +1,66 @@
+/* Layout override */
+.error-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* Large ghost number */
+.error-background {
+    position: absolute;
+    font-size: 18rem;
+    font-weight: 700;
+    opacity: 0.04;
+    user-select: none;
+    pointer-events: none;
+}
+
+/* Content */
+.error-content {
+    z-index: 2;
+    max-width: 400px;
+    animation: fadeIn 0.6s ease forwards;
+}
+
+.error-content h2 {
+    margin-bottom: 1rem;
+    animation: fadeIn 0.6s ease forwards;
+}
+
+.error-content p {
+    margin-bottom: 2rem;
+    animation: fadeIn 0.6s ease 0.1s forwards;
+    opacity: 0;
+}
+
+/* Link styling */
+.error-link {
+    color: #666;
+    text-decoration: none;
+    border-bottom: 1px solid #aaa;
+    padding-bottom: 2px;
+    transition: opacity 0.2s ease, border-color 0.2s ease;
+    animation: fadeIn 0.6s ease 0.2s forwards;
+    opacity: 0;
+}
+
+.error-link:hover {
+    opacity: 0.6;
+    border-color: #666;
+}
+
+/* Fade animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
