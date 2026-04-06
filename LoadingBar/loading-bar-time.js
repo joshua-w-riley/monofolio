@@ -3,17 +3,19 @@ document.addEventListener("DOMContentLoaded", () => {
     const loader = document.getElementById("loader");
     const content = document.querySelector(".content-container");
 
-    if (sessionStorage.getItem("siteLoaded")) {
+    const alreadyLoaded = sessionStorage.getItem("siteLoaded");
+
+    if (alreadyLoaded) {
+        content.style.visibility = "visible";
         return;
     }
 
     loader.classList.add("active");
-    content.classList.add("loading");
     document.body.style.overflow = "hidden";
 
     const bar = new ldBar("#loaderBar");
 
-    const duration = 1400; // total animation time (ms)
+    const duration = 1400;
     const start = performance.now();
 
     function easeOutCubic(t) {
@@ -28,17 +30,16 @@ document.addEventListener("DOMContentLoaded", () => {
         bar.set(eased * 100);
 
         if (progress < 1) {
-        requestAnimationFrame(animate);
+            requestAnimationFrame(animate);
         } else {
-        setTimeout(() => {
-            loader.classList.remove("active");
-            content.classList.remove("loading");
-            document.body.style.overflow = "";
-            sessionStorage.setItem("siteLoaded", "true");
-        }, 250);
+            setTimeout(() => {
+                loader.classList.remove("active");
+                document.body.style.overflow = "";
+                content.style.visibility = "visible";
+                sessionStorage.setItem("siteLoaded", "true");
+            }, 250);
         }
     }
 
     requestAnimationFrame(animate);
-
 });

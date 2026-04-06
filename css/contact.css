@@ -2,6 +2,7 @@
   min-height: 100%;
   padding-top: 18vh;
   background: #f4f4f4;
+  transform: none;
 }
 
 .contact-block {
@@ -60,19 +61,19 @@
 }
 
 .contact-links a:nth-child(1) {
-  animation-delay: 0.1s;
+  animation-delay: 0.15s;
 }
 
 .contact-links a:nth-child(2) {
-  animation-delay: 0.2s;
+  animation-delay: 0.28s;
 }
 
 .contact-links a:nth-child(3) {
-  animation-delay: 0.3s;
+  animation-delay: 0.42s;
 }
 
 .contact-links a:nth-child(4) {
-  animation-delay: 0.4s;
+  animation-delay: 0.55s;
 }
 
 @keyframes fadeInSlow {

@@ -97,6 +97,7 @@ body {
   padding: 40px;
   transform: translateY(0);
   filter: none;
+  visibility: hidden;
   transition:
     opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
     transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
@@ -107,6 +108,10 @@ body {
   opacity: 0;
   transform: translateY(10px);
   filter: grayscale(100%) blur(4px);
+}
+
+.js-loading .content-container {
+  visibility: hidden;
 }
 
 /* Page Content */
