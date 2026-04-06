@@ -92,7 +92,7 @@ body {
   height: 90vh;
   max-width: max(680px, 95vw);
   border-radius: 8px;
-  overflow: hidden;
+  overflow: visible;
   opacity: 1;
   padding: 40px;
   transform: translateY(0);
@@ -107,44 +107,6 @@ body {
   opacity: 0;
   transform: translateY(10px);
   filter: grayscale(100%) blur(4px);
-}
-
-/* Navbar */
-.navbar {
-  display: flex;
-  gap: 12px;
-  padding-top: 20px;
-}
-
-.nav-link {
-  position: relative;
-  text-decoration: none;
-  color: #5f5e5e;
-  font-size: 0.95rem;
-  font-weight: 500;
-  text-transform: lowercase;
-  transition: transform 0.2s cubic-bezier(.4, 0, .2, 1);
-}
-
-.nav-link:hover {
-  color: #2c2c2c;
-}
-
-
-.nav-link.active span {
-  visibility: hidden;
-}
-
-.nav-link.active::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 50%;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--active-dot-color);
-  transform: translateY(-50%);
 }
 
 /* Page Content */
