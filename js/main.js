@@ -7,13 +7,32 @@ const pages = document.querySelectorAll('.page');
 const links = document.querySelectorAll('.nav-link');
 
 function showPage(id, updateUrl = true) {
+    let found = false;
+
     pages.forEach(page => {
-        page.hidden = page.id !== id;
+        if (page.id === id) {
+            page.hidden = false;
+            found = true;
+        } else {
+            page.hidden = true;
+        }
     });
 
     links.forEach(link => {
         link.classList.toggle('active', link.dataset.page === id);
     });
+
+    if (!found) {
+        const notFound = document.getElementById('not-found');
+        if (notFound) {
+            notFound.hidden = false;
+        }
+
+        if (updateUrl) {
+            history.replaceState(null, null, '#404');
+        }
+        return;
+    }
 
     if (updateUrl) {
         history.pushState(null, '', `#${id}`);

@@ -24,20 +24,29 @@
 } */
 
 .manifesto-line {
-    font-size: 2rem;
-    font-weight: 500;
-    line-height: 1.2;
+    margin-top: 48px;
+    font-size: clamp(34px, 4vw, 44px);
+    font-weight: 600;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    color: #1d1d1fcd;
+    animation: pageReveal 0.45s ease-out forwards;
+    animation-delay: 0.1s;
 }
 
-/* .manifesto-author {
+.manifesto-author {
     margin-top: 24px;
-    font-size: 0.75rem;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
+    display: flex;
+    justify-content: flex-end;
+    color: #1d1d1fc7;
+    font-size: 1.25rem;
+    font-weight: 800;
+    letter-spacing: 0.18em;
     opacity: 0.35;
-} */
+    text-transform: uppercase;
+}
 
-.manifesto-signature {
+/* .manifesto-signature {
     position: absolute;
     right: 0;
     bottom: -32px;
@@ -46,7 +55,9 @@
     opacity: 0.35;
     text-transform: uppercase;
     font-weight: 500;
-}
+    
+    color: #1d1d1fc7;
+} */
 
 .fade-up {
     opacity: 0;
@@ -64,4 +75,15 @@
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+@keyframes pageReveal {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+fade-up:nth-child(1) {
+    animation-delay: 0.1s;
 }
