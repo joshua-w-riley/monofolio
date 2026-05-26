@@ -76,7 +76,7 @@
   line-height: 1.15;
   font-weight: 500; */
   max-width: 720px;
-  margin-bottom: 62px;
+  margin-bottom: 32px;
   font-size: clamp(36px, 4vw, 48px);
   font-weight: 600;
   line-height: 1.12;
@@ -85,18 +85,25 @@
 }
 
 .about-body p {
+  max-width: 38ch;
   font-size: 18px;
-  line-height: 1.85;
-  color: #444;
-  margin-bottom: 32px;
-  max-width: 600px;
+  line-height: 1.55;
+  letter-spacing: -0.01em;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.68);
   margin: 0 0 14px 0;
-  line-height: 1.5;
+
+  font-feature-settings: "ss01" on, "cv01" on, "cv02" on;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
 
 .about-body .closing {
-  margin-top: 16px;
+  margin-top: 18px;
+  font-weight: 500;
   line-height: 1.4;
+  letter-spacing: -0.015em;
+  color: rgba(0, 0, 0, 0.82);
 }
 
 @keyframes fadeUp {

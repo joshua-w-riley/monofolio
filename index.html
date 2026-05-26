@@ -60,19 +60,10 @@
             <header class="main-content">
                 <a data-page="home" href="#home">
                     <h1 class="header">
-                        Joshua W. Riley
+                        <span class="desktop-name">Joshua W. Riley</span>
+                        <span class="mobile-name">JWR</span>
                     </h1>
                 </a>
-                <section id="about" class="page" hidden>
-                    <!-- <h4 class="sub-header description">Full-Stack Developer</h4> -->
-                    <h4 class="sub-header description">
-                        <!-- Full-Stack Engineer <br> -->
-                        <!-- I focus on <br>
-                        how it works, <br>
-                        how it is written, <br>
-                        and how it feels. -->
-                    </h4>
-                </section>
             </header>
             <!-- Navigation -->
             <nav class="navbar">
@@ -81,6 +72,7 @@
                     <li><a href="#about" class="nav-link" data-page="about"><span>About</span></a></li>
                     <!-- <li><a href="#projects" class="nav-link" data-page="projects"><span>Projects</span></a></li> -->
                     <li><a href="#contact" class="nav-link" data-page="contact"><span>Contact</span></a></li>
+                    <li><a href="#contact" class="nav-link discover" data-page="contact"><span>Discover</span></a></li>
                 </ul>
             </nav>
         </div>
@@ -88,7 +80,6 @@
             <main class="subsection2">
                 <section id="home" class="page">
                     <div class="home-container">
-                        <div></div>
                         <p class="home-text fade-up manifesto-line" style="animation-delay: 80ms;">
                             Working ≠ Usable.
                         </p>
@@ -140,11 +131,13 @@
                         <div class="contact-links">
                             <a rel="noopener noreferrer" onclick="sendEmail()"
                                 href="mailto:joshua.studio@proton.me">email</a>
-                            <a rel="noopener noreferrer" href="https://www.linkedin.com/in/joshua-w-riley/"
-                                target="_blank">linkedin</a>
                             <a rel="noopener noreferrer" href="https://github.com/joshua-w-riley"
                                 target="_blank">github</a>
+                            <a rel="noopener noreferrer" href="https://www.linkedin.com/in/joshua-w-riley/"
+                                target="_blank">linkedin</a>
                             <a href="./source/Joshua W. Riley - Resume.pdf" download>resume</a>
+                            <a data-cal-link="jsh-wll/30min" data-cal-namespace="30min"
+                                data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>schedule</a>
                         </div>
                     </div>
                 </section>
@@ -171,6 +164,17 @@
     <script src="./js/main.js"></script>
     <script src="./js/nav.js"></script>
     <script src="./js/sendEmail.js"></script>
+    <!-- Cal element-click embed code begins -->
+    <script type="text/javascript">
+        (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+        Cal("init", "30min", { origin: "https://app.cal.com" });
+        // Important: Please add the following attributes to the element that should trigger the calendar to open upon clicking.
+        // `data-cal-link="jsh-wll/30min"`
+        // data-cal-namespace="30min"
+        // `data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'`
+        Cal.ns["30min"]("ui", { "hideEventTypeDetails": false, "layout": "month_view" });
+    </script>
+    <!-- Cal element-click embed code ends -->
 </body>
 
 </html>
