@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="apple-touch-icon" sizes="57x57" href="./assets/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="./assets/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="./assets/apple-icon-72x72.png">
@@ -13,22 +14,38 @@
     <link rel="apple-touch-icon" sizes="144x144" href="./assets/apple-icon-144x144.png">
     <link rel="apple-touch-icon" sizes="152x152" href="./assets/apple-icon-152x152.png">
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-icon-180x180.png">
+
     <link rel="icon" type="image/png" sizes="192x192" href="./assets/android-icon-192x192.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="./assets/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
+
     <link rel="manifest" href="./assets/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
+
+    <meta name="msapplication-TileColor" content="#f4f4f4">
     <meta name="msapplication-TileImage" content="./assets/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-    <title>Portfolio</title>
-    <meta name="description" content="Joshua W. Riley — Full-Stack Developer & Systems Analyst Portfolio." />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Joshua W. Riley — Portfolio" />
-    <meta property="og:description"
-        content="Welcome to my portfolio! I am a Full-Stack Developer and Systems Analyst." />
-    <!-- <meta property="og:image" content="https://github.com/joshua-w-riley" /> -->
-    <!-- <meta property="og:url" content=" /> -->
+    <meta name="theme-color" content="#f4f4f4">
+
+    <title>Joshua W. Riley</title>
+
+    <meta name="description"
+        content="Joshua W. Riley — systems analyst, developer, and creative building structured systems, personal projects, music, and product archives.">
+
+    <link rel="canonical" href="https://YOUR-DOMAIN.com/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Joshua W. Riley">
+    <meta property="og:description" content="Systems, projects, music, and releases from Joshua W. Riley.">
+    <meta property="og:url" content="https://YOUR-DOMAIN.com/">
+    <meta property="og:site_name" content="Joshua W. Riley">
+
+    <!-- Add later when you make a real preview image -->
+    <!-- <meta property="og:image" content="https://YOUR-DOMAIN.com/assets/og-image.jpg"> -->
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Joshua W. Riley">
+    <meta name="twitter:description" content="Systems, projects, music, and releases from Joshua W. Riley.">
+    <!-- <meta name="twitter:image" content="https://YOUR-DOMAIN.com/assets/og-image.jpg"> -->
     <script>
         document.documentElement.classList.add("js-loading");
     </script>
@@ -42,8 +59,11 @@
     <link rel="stylesheet" href="./css/nav.css" />
     <!-- 3️⃣ Page sections -->
     <link rel="stylesheet" href="./css/home.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
     <link rel="stylesheet" href="./css/about.css" />
+    <link rel="stylesheet" href="./css/music.css" />
     <link rel="stylesheet" href="./css/contact.css" />
+    <link rel="stylesheet" href="./css/updates.css" />
     <link rel="stylesheet" href="./css/404.css" />
     <!-- 4️⃣ Loader override -->
     <link rel="stylesheet" href="./LoadingBar/loading-bar-time.css" />
@@ -60,8 +80,8 @@
             <header class="main-content">
                 <a data-page="home" href="#home">
                     <h1 class="header">
-                        <span class="desktop-name">Joshua W. Riley</span>
-                        <span class="mobile-name">JWR</span>
+                        <span class="desktop-name">JO<span class="logo-colon">:</span>SH</span>
+                        <span class="mobile-name">JO<span class="logo-colon">:</span>SH</span>
                     </h1>
                 </a>
             </header>
@@ -71,6 +91,8 @@
                     <!-- <li><a href="#home" class="nav-link active" data-page="home"><span>Home</span></a></li> -->
                     <li><a href="#about" class="nav-link" data-page="about"><span>About</span></a></li>
                     <!-- <li><a href="#projects" class="nav-link" data-page="projects"><span>Projects</span></a></li> -->
+                    <li><a href="#music" class="nav-link" data-page="music"><span>Music</span></a></li>
+                    <li><a href="#updates" class="nav-link" data-page="updates"><span>Updates</span></a></li>
                     <li><a href="#contact" class="nav-link" data-page="contact"><span>Contact</span></a></li>
                     <!-- <li><a href="#contact" class="nav-link discover" data-page="contact"><span>Discover</span></a></li> -->
                 </ul>
@@ -92,52 +114,186 @@
                 <!-- About Section -->
                 <section id="about" class="page about-page" hidden>
                     <div class="about-page-inner">
-                        <div class="about-content">
-                            <div class="about-left">
-                                <p class="about-label">About</p>
-                                <h1 class="about-hero fade-up">
-                                    I build full stack systems with<br>
-                                    restraint and respect.
-                                </h1>
-                                <div class="about-body">
-                                    <p class="fade-up" style="animation-delay: 80ms;">
-                                        Most problems I’m drawn to start messy — legacy logic,
-                                        unreliable data, unclear ownership, bloated intefaces,
-                                        time-intensive workflows.
-                                    </p>
-                                    <p class="closing fade-up tight" style="animation-delay: 160ms;">
-                                        I simplify it.
-                                    </p>
-                                    <!-- <p class="closing fade-up" style="animation-delay: 240ms;">
-                                        Over-engineering is noisy.<br>
-                                        A bad user experience is worse.
-                                    </p> -->
+                        <div class="about-block">
+                            <p class="about-label">About</p>
+                            <h1 class="about-title fade-up">
+                                I build systems people trust.
+                            </h1>
+                            <div class="about-intro">
+                                <p class="fade-up" style="animation-delay: 80ms;">
+                                    Most problems start the same way: legacy logic,
+                                    unreliable data, unclear ownership, bloated
+                                    interfaces, and workflows that consume more time than they should.
+                                </p>
+                                <p class="closing fade-up tight" style="animation-delay: 160ms;">
+                                    I simplify them.
+                                </p>
+                                <div class="about-currently fade-up" style="animation-delay: 240ms;">
+                                    <p class="about-small-label">Currently</p>
+
+                                    <div class="currently-list">
+                                        <div class="currently-item">
+                                            <h2>
+                                                <a href="https://unknownarchives.com/" target="_blank"
+                                                    rel="noopener noreferrer">
+                                                    Unknown Archives
+                                                </a>
+                                            </h2>
+                                            <p>Building a product archive around language, clothing, and cultural
+                                                systems.</p>
+                                        </div>
+
+                                        <div class="currently-item">
+                                            <h2>Music</h2>
+                                            <p>Producing extended electronic tracks and simple visual systems around
+                                                them.</p>
+                                        </div>
+
+                                        <div class="currently-item">
+                                            <h2>Personal systems</h2>
+                                            <p>Designing cleaner tools, workflows, and interfaces for myself and
+                                                others.</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
                 <!-- End About Section -->
-                <!-- Projects Section -->
-                <section id="projects" class="page" hidden>Projects content here</section>
-                <!-- End Project Section -->
+                <!-- Music Section -->
+                <section id="music" class="page music-page" hidden>
+                    <div class="music-page-inner">
+                        <div class="music-block">
+                            <p class="music-label">Music</p>
+                            <h1 class="music-title fade-up">
+                                Imagine
+                            </h1>
+                            <p class="music-intro fade-up" style="animation-delay: 80ms;">
+                                First single from the upcoming EP.
+                            </p>
+                            <div class="music-player fade-up" style="animation-delay: 160ms;">
+                                <iframe width="100%" height="166" scrolling="no" frameborder="no"
+                                    allow="autoplay; encrypted-media"
+                                    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2338979225&color=%23969696&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false"></iframe>
+                            </div>
+
+                            <p class="music-note fade-up" style="animation-delay: 240ms;">
+                                EP coming soon.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <!-- End Music Section -->
+                <!-- Updates Section -->
+                <section id="updates" class="page updates-page" hidden>
+                    <div class="updates-page-inner">
+                        <div class="updates-block">
+                            <p class="updates-label">Updates</p>
+
+                            <h1 class="updates-title fade-up">
+                                Notes, releases, and resources.
+                            </h1>
+
+                            <p class="updates-intro fade-up" style="animation-delay: 80ms;">
+                                Occasional project access, creative systems, releases, and updates from Joshua W. Riley.
+                            </p>
+
+                            <form class="updates-form fade-up" action="PASTE_KIT_FORM_ACTION_URL_HERE" method="post"
+                                style="animation-delay: 160ms;">
+                                <!-- Paste Kit hidden inputs here only -->
+
+                                <label class="sr-only" for="updates-email">Email address</label>
+
+                                <div class="updates-email-row">
+                                    <input id="updates-email" name="email_address" type="email"
+                                        placeholder="Email address" autocomplete="email" required>
+
+                                    <button type="submit">Join</button>
+                                </div>
+                            </form>
+
+                            <div class="updates-archive fade-up" style="animation-delay: 240ms;">
+                                <p class="updates-small-label">Archive</p>
+
+                                <h2 class="updates-archive-title">
+                                    Past releases
+                                </h2>
+
+                                <div class="release-list">
+                                    <article class="release-item">
+                                        <div>
+                                            <p class="release-type">Resource</p>
+                                            <h3>Free resources coming soon.</h3>
+                                        </div>
+
+                                        <span>Soon</span>
+                                    </article>
+
+                                    <article class="release-item">
+                                        <div>
+                                            <p class="release-type">Music</p>
+                                            <h3>Imagine</h3>
+                                        </div>
+
+                                        <span>2026</span>
+                                    </article>
+
+                                    <article class="release-item">
+                                        <div>
+                                            <p class="release-type">Project</p>
+                                            <h3>Unknown Archives</h3>
+                                        </div>
+
+                                        <span>In progress</span>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- End Updates Section -->
                 <!-- Contact Section -->
-                <section id="contact" class="page" hidden>
-                    <div class="contact-block">
-                        <!-- <p class="contact-heading">Contact</p> -->
-                        <h2 class="contact-title">
-                            Let's talk.
-                        </h2>
-                        <div class="contact-links">
-                            <a rel="noopener noreferrer" onclick="sendEmail()"
-                                href="mailto:joshua.studio@proton.me">email</a>
-                            <a rel="noopener noreferrer" href="https://github.com/joshua-w-riley"
-                                target="_blank">github</a>
-                            <a rel="noopener noreferrer" href="https://www.linkedin.com/in/joshua-w-riley/"
-                                target="_blank">linkedin</a>
-                            <a href="./source/Joshua W. Riley - Resume.pdf" download>resume</a>
-                            <a data-cal-link="jsh-wll/30min" data-cal-namespace="30min"
-                                data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>schedule</a>
+                <section id="contact" class="page contact-page" hidden>
+                    <div class="contact-page-inner">
+                        <div class="contact-block">
+                            <p class="contact-label">Contact</p>
+
+                            <h2 class="contact-title fade-up">
+                                Let's talk.
+                            </h2>
+
+                            <p class="contact-intro fade-up" style="animation-delay: 80ms;">
+                                Available for systems, product, design, and creative collaborations.
+                            </p>
+
+                            <div class="contact-links">
+                                <a class="fade-up" style="animation-delay: 160ms;" rel="noopener noreferrer"
+                                    href="mailto:joshua.studio@proton.me" onclick="sendEmail(event)">
+                                    email
+                                </a>
+
+                                <a class="fade-up" style="animation-delay: 220ms;" rel="noopener noreferrer"
+                                    href="https://github.com/joshua-w-riley" target="_blank">
+                                    github
+                                </a>
+
+                                <a class="fade-up" style="animation-delay: 280ms;" rel="noopener noreferrer"
+                                    href="https://www.linkedin.com/in/joshua-w-riley/" target="_blank">
+                                    linkedin
+                                </a>
+
+                                <a class="fade-up" style="animation-delay: 340ms;"
+                                    href="./source/Joshua W. Riley - Resume.pdf" download>
+                                    resume
+                                </a>
+
+                                <a class="fade-up" style="animation-delay: 400ms;" data-cal-link="jsh-wll/30min"
+                                    data-cal-namespace="30min"
+                                    data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>
+                                    schedule
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -157,11 +313,43 @@
                 </section>
                 <!-- End Not Found Section -->
             </main>
+            <!-- Footer -->
+            <footer class="site-footer" id="site-footer" aria-hidden="true">
+                <div class="footer-inner">
+                    <div class="footer-cluster">
+                        <div>
+                            <span>Designed:</span>
+                            <span>© 2026</span>
+                        </div>
+                    </div>
+
+                    <div class="footer-cluster">
+                        <a href="mailto:joshua.studio@proton.me">Business Email</a>
+                        <a href="./privacy.html">Privacy Policy</a>
+                        <a href="./terms.html">Terms of Use</a>
+                    </div>
+
+                    <div class="footer-cluster">
+                        <div>
+                            <strong>Built by:</strong>
+                            <span>Joshua W. Riley</span>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+            <button class="footer-toggle" type="button" aria-label="Open footer" aria-expanded="false"
+                aria-controls="site-footer">
+                <span class="footer-toggle-icon" aria-hidden="true">⌄</span>
+            </button>
+
+            <div class="footer-dim" hidden></div>
         </div>
     </div>
     <script src="./LoadingBar/loading-bar.js"></script>
     <script src="./LoadingBar/loading-bar-time.js"></script>
     <script src="./js/main.js"></script>
+    <script src="./js/footer.js"></script>
     <script src="./js/nav.js"></script>
     <script src="./js/sendEmail.js"></script>
     <!-- Cal element-click embed code begins -->
