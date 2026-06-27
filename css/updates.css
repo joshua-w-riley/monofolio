@@ -5,23 +5,16 @@
 }
 
 .updates-page-inner {
-    /* min-height: calc(100vh - 96px); */
     min-height: 100%;
-    padding: 120px 8vw 72px;
+    padding: 56px 8vw 96px;
     display: grid;
+    align-content: start;
 }
-
-/* .updates-block {
-    max-width: 620px;
-    margin: 0 auto;
-    width: 100%;
-} */
 
 .updates-block {
     max-width: 620px;
     margin: 0 auto;
     width: 100%;
-    padding-bottom: 56px;
 }
 
 .updates-label,
@@ -56,7 +49,7 @@
 
 /* Email Form */
 .updates-form {
-    max-width: 520px;
+    max-width: 620px;
     margin-top: 48px;
 }
 
@@ -109,7 +102,7 @@
 
 .updates-email-row button:hover {
     color: #1D1D1F;
-    transform: translateX(4px);
+    transform: translateX(-4px);
 }
 
 /* Archive */

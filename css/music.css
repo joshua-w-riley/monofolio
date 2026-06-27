@@ -5,10 +5,10 @@
 }
 
 .music-page-inner {
-    /* min-height: calc(100vh - 96px); */
     min-height: 100%;
-    padding: 120px 8vw 72px;
+    padding: 56px 8vw 96px;
     display: grid;
+    align-content: start;
 }
 
 .music-block {

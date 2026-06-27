@@ -21,17 +21,17 @@
 }
 
 .about-page-inner {
-  /* min-height: calc(100vh - 96px); */
   min-height: 100%;
-  padding: 120px 8vw 72px;
+  padding: 56px 8vw 96px;
   display: grid;
+  align-content: start;
 }
 
 .about-block {
   max-width: 620px;
   margin: 0 auto;
   width: 100%;
-  padding-bottom: 56px;
+  /* padding-bottom: 56px; */
 }
 
 .about-label {
@@ -78,11 +78,6 @@
   color: rgba(0, 0, 0, 0.82);
 }
 
-.about-currently {
-  margin-top: 48px;
-  max-width: 620px;
-}
-
 .about-small-label {
   letter-spacing: 0.12em;
   font-size: 12px;
@@ -90,7 +85,12 @@
   text-transform: uppercase;
   opacity: 0.6;
   font-weight: 500;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+}
+
+.about-currently {
+  margin-top: 32px;
+  max-width: 620px;
 }
 
 .currently-list {
@@ -140,6 +140,8 @@
   color: inherit;
   text-decoration: none;
 }
+
+
 
 @keyframes fadeUp {
   to {
