@@ -46,6 +46,7 @@
     margin: 0;
 }
 
+
 .music-player {
     margin-top: 48px;
     max-width: 520px;
@@ -67,44 +68,4 @@
     line-height: 1.5;
     letter-spacing: -0.01em;
     color: rgba(0, 0, 0, 0.52);
-}
-
-@media (max-width: 640px) {
-    .music-page-inner {
-        min-height: calc(100svh - 120px);
-        padding: 44px 24px 64px;
-        align-content: start;
-    }
-
-    .music-block {
-        max-width: 100%;
-        margin: 0;
-    }
-
-    .music-title {
-        font-size: clamp(36px, 9vw, 44px);
-        line-height: 1.08;
-        letter-spacing: -0.035em;
-        margin-bottom: 24px;
-    }
-
-    .music-intro {
-        max-width: 34ch;
-        font-size: 16px;
-        line-height: 1.55;
-    }
-
-    .music-player {
-        margin-top: 42px;
-        max-width: 100%;
-        padding: 22px 0;
-    }
-
-    .music-player iframe {
-        height: 166px;
-    }
-
-    .music-note {
-        font-size: 15px;
-    }
 }

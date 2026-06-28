@@ -52,34 +52,6 @@
     border-color: #666;
 }
 
-@media (max-width: 640px) {
-    .error-page {
-        min-height: calc(100svh - 120px);
-        height: auto;
-        padding: 48px 24px 64px;
-        position: relative;
-    }
-
-    .error-background {
-        font-size: clamp(8rem, 38vw, 12rem);
-    }
-
-    .error-content {
-        max-width: 320px;
-        width: 100%;
-    }
-
-    .error-content h2 {
-        font-size: 24px;
-        line-height: 1.15;
-    }
-
-    .error-content p {
-        font-size: 16px;
-        line-height: 1.45;
-    }
-}
-
 /* Fade animation */
 @keyframes fadeIn {
     from {

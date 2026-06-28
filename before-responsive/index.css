@@ -70,7 +70,6 @@ body {
   font-feature-settings: "cv11", "ss01";
   font-size: 16px;
   line-height: 1.5;
-  overflow-x: hidden;
 }
 
 /* Page Content */
@@ -139,73 +138,6 @@ body {
   display: flex;
   align-items: stretch;
   justify-content: center;
-}
-
-@media (max-width: 640px) {
-
-  html,
-  body {
-    width: 100%;
-    min-height: 100%;
-  }
-
-  html {
-    scroll-snap-type: y mandatory;
-  }
-
-  body {
-    height: auto;
-    min-height: 100svh;
-    display: block;
-    overflow-x: hidden;
-  }
-
-  .content-container {
-    width: 100%;
-    min-height: 100svh;
-    height: auto;
-    max-width: none;
-    border-radius: 0;
-    align-items: stretch;
-  }
-
-  .top-content {
-    position: sticky;
-    top: 0;
-    z-index: 60;
-    width: 100%;
-    height: auto;
-    min-height: 120px;
-    padding: 24px 24px 0;
-    background: #F5F5F7;
-  }
-
-  .main-content {
-    height: auto;
-    max-height: none;
-  }
-
-  .sub-content {
-    width: 100%;
-    height: auto;
-    min-height: calc(100svh - 120px);
-    display: block;
-  }
-
-  .subsection2 {
-    width: 100%;
-    min-height: calc(100svh - 120px);
-    height: auto;
-    display: block;
-  }
-
-  .page {
-    width: 100%;
-    min-height: calc(100svh - 120px);
-    height: auto;
-    scroll-snap-align: start;
-    scroll-margin-top: 120px;
-  }
 }
 
 @keyframes fadeEffect {

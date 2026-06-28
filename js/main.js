@@ -1,36 +1,68 @@
-// This file is required by the index.html file and will be executed in the renderer process for that window.
-// All of the Node.js APIs are available in this process. It has the same sandbox as a Chrome extension.
-
-// This file is used to handle the navigation between different pages in the application.
-// It listens for click events on buttons with the data-page attribute and shows the corresponding page while hiding the others.
 const pages = document.querySelectorAll('.page');
 const links = document.querySelectorAll('.nav-link');
+const pageOrder = ['home', 'about', 'music', 'updates', 'contact'];
+
+function isMobile() {
+    return window.matchMedia('(max-width: 640px)').matches;
+}
+
+function resetDesktopPages() {
+    if (!isMobile()) {
+        const hash = window.location.hash.replace('#', '') || 'home';
+        showPage(hash, false);
+    }
+}
+
+window.addEventListener('resize', resetDesktopPages);
+
+function updateNavState(id) {
+    const activeIndex = pageOrder.indexOf(id);
+
+    links.forEach(link => {
+        const linkIndex = pageOrder.indexOf(link.dataset.page);
+        const distance = linkIndex - activeIndex;
+
+        link.classList.toggle('active', link.dataset.page === id);
+        link.classList.toggle('is-prev', distance === -1);
+        link.classList.toggle('is-next', distance === 1);
+        link.classList.toggle(
+            'is-hidden-mobile',
+            isMobile() && link.dataset.page !== id && Math.abs(linkIndex - activeIndex) > 1
+        );
+    });
+}
 
 function showPage(id, updateUrl = true) {
     let found = false;
 
-    pages.forEach(page => {
-        if (page.id === id) {
-            page.hidden = false;
-            found = true;
-        } else {
-            page.hidden = true;
-        }
-    });
+    if (isMobile()) {
+        pages.forEach(page => {
+            page.hidden = !pageOrder.includes(page.id);
+            if (page.id === id) found = true;
+        });
 
-    links.forEach(link => {
-        link.classList.toggle('active', link.dataset.page === id);
-    });
+        const target = document.getElementById(id);
+
+        if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    } else {
+        pages.forEach(page => {
+            if (page.id === id) {
+                page.hidden = false;
+                found = true;
+            } else {
+                page.hidden = true;
+            }
+        });
+    }
+
+    updateNavState(id);
 
     if (!found) {
         const notFound = document.getElementById('not-found');
-        if (notFound) {
-            notFound.hidden = false;
-        }
-
-        if (updateUrl) {
-            history.replaceState(null, null, '#404');
-        }
+        if (notFound) notFound.hidden = false;
+        if (updateUrl) history.replaceState(null, null, '#404');
         return;
     }
 
@@ -46,6 +78,26 @@ links.forEach(link => {
     });
 });
 
+const observer = new IntersectionObserver(entries => {
+    if (!isMobile()) return;
+
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const id = entry.target.id;
+            updateNavState(id);
+            history.replaceState(null, '', `#${id}`);
+        }
+    });
+}, {
+    threshold: 0.68
+});
+
+pages.forEach(page => {
+    if (pageOrder.includes(page.id)) {
+        observer.observe(page);
+    }
+});
+
 window.addEventListener('DOMContentLoaded', () => {
     const hash = window.location.hash.replace('#', '') || 'home';
     showPage(hash, false);
@@ -55,20 +107,3 @@ window.addEventListener('popstate', () => {
     const hash = window.location.hash.replace('#', '') || 'home';
     showPage(hash, false);
 });
-
-function openContactSection(event, contentName) {
-    let i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tab-content");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tab-button");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById(contentName).style.display = "block";
-    event.currentTarget.className += " active";
-}
-document.getElementById("defaultOpenContactSection").click();
-
-showPage('home');

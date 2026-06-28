@@ -180,6 +180,7 @@
 }
 
 /* Accessibility */
+
 .sr-only {
     position: absolute;
     width: 1px;
@@ -190,45 +191,54 @@
 }
 
 /* Responsive */
-@media (max-width: 640px) {
+
+@media (max-width: 768px) {
     .updates-page-inner {
-        min-height: calc(100svh - 120px);
-        padding: 40px 24px 72px;
-        align-content: start;
+        min-height: calc(100vh - 180px);
+        padding: 112px 14vw 64px;
     }
 
     .updates-block {
-        max-width: 100%;
+        max-width: 420px;
         margin: 0;
     }
 
     .updates-title {
-        max-width: 100%;
-        font-size: clamp(32px, 8.6vw, 42px);
-        line-height: 1.04;
-        letter-spacing: -0.045em;
-        margin-bottom: 24px;
+        font-size: clamp(32px, 5.2vw, 44px);
+        line-height: 1.08;
     }
 
     .updates-intro {
-        max-width: 34ch;
         font-size: 16px;
-        line-height: 1.5;
+        line-height: 1.55;
     }
 
     .updates-form {
-        max-width: 100%;
-        margin-top: 40px;
+        margin-top: 44px;
+    }
+
+    .updates-email-row input {
+        font-size: 16px;
+        padding: 16px 64px 16px 0;
     }
 
     .updates-archive {
+        margin-top: 0;
         padding-top: 36px;
+    }
+
+    .release-item {
+        gap: 20px;
     }
 }
 
 @media (max-width: 460px) {
     .updates-page-inner {
-        padding: 40px 24px 56px;
+        padding: 104px 24px 56px;
+    }
+
+    .updates-block {
+        max-width: 100%;
     }
 
     .updates-email-row input {

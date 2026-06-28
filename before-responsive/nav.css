@@ -23,8 +23,7 @@
 
 .logo-colon {
     display: inline-block;
-    font-weight: 800;
-    transform: translateY(-0.11em) scale(1.08);
+    transform: translateY(-0.06em);
 }
 
 .sub-navbar {
@@ -37,10 +36,6 @@
     gap: 12px;
 }
 
-.mobile-only {
-    display: none;
-}
-
 .nav-link {
     text-decoration: none;
     color: #6a6a6a;
@@ -49,12 +44,24 @@
     text-transform: lowercase;
     padding-left: 14px;
     position: relative;
-    transition: color 0.28s ease, opacity 0.28s ease;
+    transition: color 0.25s ease;
     letter-spacing: -0.02em;
+}
+
+.nav-link {
+    transition: color 0.28s ease;
 }
 
 .nav-link.active {
     color: #1a1a1a;
+}
+
+.nav-link.discover {
+    transition: color 0.45s ease;
+}
+
+.nav-link.discover:hover {
+    color: #000;
 }
 
 .nav-button {
@@ -66,6 +73,7 @@
     cursor: pointer;
 }
 
+/* Subsection Styles */
 .subsection2 {
     width: 100%;
     height: 100%;
@@ -79,7 +87,8 @@
     display: none;
 }
 
-@media (max-width: 640px) {
+/* responsive */
+@media (max-width: 768px) {
     .desktop-name {
         display: none;
     }
@@ -93,64 +102,20 @@
     .header {
         font-size: clamp(2rem, 7vw, 2.75rem);
         line-height: 0.95;
-        margin-bottom: 0;
-    }
-
-    .mobile-only {
-        display: list-item;
     }
 
     .navbar {
-        margin-left: auto;
+        width: 100%;
+        justify-content: flex-end;
         padding-right: 0;
-        align-items: flex-start;
     }
 
     .sub-navbar {
-        width: 82px;
-        height: 54px;
-        padding: 6px 0;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        justify-content: center;
         gap: 2px;
-        overflow: hidden;
-        text-align: right;
     }
 
     .nav-link {
-        display: block;
-        padding-left: 0;
-        font-size: 0.88rem;
-        line-height: 1.05;
-        color: rgba(0, 0, 0, 0.34);
-        transition: color 0.28s ease, transform 0.28s ease, opacity 0.28s ease;
-    }
-
-    .nav-link.active {
-        color: rgba(0, 0, 0, 0.82);
-        font-weight: 600;
-    }
-
-    .nav-link.is-prev,
-    .nav-link.is-next {
-        color: rgba(0, 0, 0, 0.38);
-        font-weight: 500;
-    }
-
-    .nav-link.is-hidden-mobile {
-        display: none;
-    }
-
-    .logo-colon {
-        transform: translateY(-0.12em) scale(1.12);
-    }
-
-    .subsection2 {
-        height: auto;
-        min-height: 100%;
-        display: block;
-        overflow: visible;
+        font-size: 0.9rem;
+        padding-left: 10px;
     }
 }

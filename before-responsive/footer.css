@@ -142,6 +142,7 @@
 }
 
 /* Dim layer */
+
 .footer-dim {
     position: fixed;
     inset: 0;
@@ -158,29 +159,24 @@
 }
 
 /* Mobile */
-@media (max-width: 640px) {
+
+@media (max-width: 768px) {
     .site-footer {
         left: 24px;
         right: 24px;
-        bottom: calc(48px + env(safe-area-inset-bottom));
-        background: #F5F5F7;
-        border-top: 1px solid rgba(0, 0, 0, 0.08);
     }
 
     .footer-inner {
         display: flex;
+        align-items: flex-start;
         flex-direction: column;
-        /* align-items: flex-start; */
-        align-items: center;
         gap: 14px;
-        padding: 24px 0 28px;
-        font-size: 14px;
-        line-height: 1.35;
+        padding: 18px 0 22px;
     }
 
     .footer-cluster {
         flex-wrap: wrap;
-        gap: 10px 18px;
+        gap: 12px 16px;
         white-space: normal;
     }
 
@@ -192,10 +188,6 @@
     }
 
     .footer-toggle {
-        bottom: calc(18px + env(safe-area-inset-bottom));
-    }
-
-    .footer-toggle.is-open {
-        bottom: calc(18px + env(safe-area-inset-bottom));
+        bottom: 22px;
     }
 }

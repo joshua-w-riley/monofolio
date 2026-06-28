@@ -31,6 +31,7 @@
   max-width: 620px;
   margin: 0 auto;
   width: 100%;
+  /* padding-bottom: 56px; */
 }
 
 .about-label {
@@ -140,52 +141,7 @@
   text-decoration: none;
 }
 
-@media (max-width: 640px) {
-  .about-page-inner {
-    min-height: calc(100svh - 120px);
-    padding: 40px 24px 72px;
-    align-content: start;
-  }
 
-  .about-block {
-    max-width: 100%;
-    margin: 0;
-  }
-
-  .about-label {
-    margin-bottom: 14px;
-  }
-
-  .about-title {
-    max-width: 100%;
-    font-size: clamp(32px, 8.6vw, 42px);
-    line-height: 1.04;
-    letter-spacing: -0.045em;
-    margin-bottom: 24px;
-  }
-
-  .about-intro {
-    max-width: 100%;
-    font-size: 16px;
-    line-height: 1.5;
-  }
-
-  .about-intro>p {
-    max-width: 42ch;
-    margin-bottom: 16px;
-  }
-
-  .about-currently {
-    margin-top: 40px;
-    max-width: 100%;
-  }
-
-  .currently-item p {
-    max-width: 42ch;
-    font-size: 15px;
-    line-height: 1.5;
-  }
-}
 
 @keyframes fadeUp {
   to {

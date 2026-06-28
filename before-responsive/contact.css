@@ -86,39 +86,3 @@
   border-top-color: rgba(0, 0, 0, 0.14);
   cursor: pointer;
 }
-
-@media (max-width: 640px) {
-  .contact-page-inner {
-    min-height: calc(100svh - 120px);
-    padding: 40px 24px 72px;
-    align-content: start;
-  }
-
-  .contact-block {
-    max-width: 100%;
-    margin: 0;
-  }
-
-  .contact-title {
-    max-width: 100%;
-    font-size: clamp(32px, 8.6vw, 42px);
-    line-height: 1.04;
-    letter-spacing: -0.045em;
-    margin-bottom: 24px;
-  }
-
-  .contact-intro {
-    max-width: 34ch;
-    font-size: 16px;
-    line-height: 1.5;
-  }
-
-  .contact-links {
-    margin-top: 40px;
-  }
-
-  .contact-links a {
-    padding: 18px 0;
-    font-size: 17px;
-  }
-}
