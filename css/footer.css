@@ -38,7 +38,7 @@
     font-size: 12px;
     line-height: 1.4;
     letter-spacing: -0.005em;
-    color: rgba(0, 0, 0, 0.52);
+    color: rgba(0, 0, 0, 0.58);
 }
 
 .footer-cluster {
@@ -67,7 +67,7 @@
 }
 
 .footer-cluster span {
-    color: rgba(0, 0, 0, 0.52);
+    color: rgba(0, 0, 0, 0.58);
 }
 
 .footer-cluster a,
@@ -98,7 +98,7 @@
     border: 1px solid rgba(0, 0, 0, 0.10);
     border-radius: 999px;
     background: rgba(244, 244, 244, 0.72);
-    color: rgba(0, 0, 0, 0.52);
+    color: rgba(0, 0, 0, 0.58);
     box-shadow: none;
     font: inherit;
     cursor: pointer;
@@ -170,7 +170,6 @@
     .footer-inner {
         display: flex;
         flex-direction: column;
-        /* align-items: flex-start; */
         align-items: center;
         gap: 14px;
         padding: 24px 0 28px;

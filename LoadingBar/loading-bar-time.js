@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const bar = new ldBar("#loaderBar");
 
-    const duration = 1400;
+    const duration = 800;
     const start = performance.now();
 
     function easeOutCubic(t) {
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 document.body.style.overflow = "";
                 content.style.visibility = "visible";
                 sessionStorage.setItem("siteLoaded", "true");
-            }, 250);
+            }, 150);
         }
     }
 

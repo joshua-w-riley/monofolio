@@ -24,13 +24,10 @@
 }
 
 .ldBar path.mainline {
-  /* stroke-linecap: round; */
   font-size: 1.5rem;
-
 }
 
 .ldBar path.baseline {
-  /* font-size: 10rem; */
     stroke-width: 100px;
     stroke: #f1f2f3;
     stroke-linecap: round;

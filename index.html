@@ -26,7 +26,7 @@
     <meta name="msapplication-TileImage" content="./assets/ms-icon-144x144.png">
     <meta name="theme-color" content="#f4f4f4">
 
-    <title>Joshua W. Riley</title>
+    <title>JOSHUA</title>
 
     <meta name="description"
         content="Joshua W. Riley — systems analyst, developer, and creative building structured systems, personal projects, music, and product archives.">
@@ -36,7 +36,7 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="Joshua W. Riley">
     <meta property="og:description" content="Systems, projects, music, and releases from Joshua W. Riley.">
-    <meta property="og:url" content="https://www.i-am-joshua.com"">
+    <meta property="og:url" content="https://www.i-am-joshua.com">
     <meta property="og:site_name" content="Joshua W. Riley">
 
     <!-- Add later when you make a real preview image -->
@@ -49,29 +49,12 @@
     <script>
         document.documentElement.classList.add("js-loading");
     </script>
-    <!-- 1️⃣ Third-party libraries -->
-    <link rel="stylesheet" href="./LoadingBar/loading-bar.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
-    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-    <!-- 2️⃣ Base / Global styles -->
-    <link rel="stylesheet" href="./css/index.css" />
-    <link rel="stylesheet" href="./css/nav.css" />
-    <!-- 3️⃣ Page sections -->
-    <link rel="stylesheet" href="./css/home.css" />
-    <link rel="stylesheet" href="./css/footer.css" />
-    <link rel="stylesheet" href="./css/about.css" />
-    <link rel="stylesheet" href="./css/music.css" />
-    <link rel="stylesheet" href="./css/contact.css" />
-    <link rel="stylesheet" href="./css/updates.css" />
-    <link rel="stylesheet" href="./css/404.css" />
-    <!-- 4️⃣ Loader override -->
-    <link rel="stylesheet" href="./LoadingBar/loading-bar-time.css" />
+    <link rel="stylesheet" href="./css/site.min.css">
 </head>
 
 <body>
     <!-- Loader -->
-    <div id="loader">
+    <div id="loader" aria-hidden="true">
         <div id="loaderBar" class="ldBar" data-preset="text" data-value="0" data-value-label="none"></div>
     </div>
     <div class="content-container">
@@ -80,8 +63,8 @@
             <header class="main-content">
                 <a data-page="home" href="#home">
                     <h1 class="header">
-                        <span class="desktop-name">JO<span class="logo-colon">:</span>SH</span>
-                        <span class="mobile-name">JO<span class="logo-colon">:</span>SH</span>
+                        <span class="desktop-name">JO<span class="logo-colon">.</span>SH</span>
+                        <span class="mobile-name">JO<span class="logo-colon">.</span>SH</span>
                     </h1>
                 </a>
             </header>
@@ -166,29 +149,28 @@
                     <div class="music-page-inner">
                         <div class="music-block">
                             <p class="music-label">Music</p>
-                            <h1 class="music-title fade-up">
-                                Imagine
-                            </h1>
-                            <!-- <p class="music-intro fade-up" style="animation-delay: 80ms;">
-                                From the upcoming EP.
-                            </p> -->
 
+                            <p class="music-intro fade-up" style="animation-delay: 80ms;">
+                                From the upcoming EP.
+                            </p>
                             <div class="music-player fade-up" style="animation-delay: 160ms;">
-                                <iframe width="100%" height="166" scrolling="no" frameborder="no"
+                                <iframe title="SoundCloud audio player" width="100%" height="166" loading="lazy"
                                     allow="autoplay; encrypted-media"
-                                    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2358523865&color=%23848484&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false"></iframe>
+                                    data-src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2358523865&amp;color=%23212121&amp;auto_play=false&amp;hide_related=true&amp;show_comments=false&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=false">
+                                </iframe>
+
+                                <iframe title="SoundCloud audio player" width="100%" height="166" loading="lazy"
+                                    allow="autoplay; encrypted-media"
+                                    data-src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2338979225&amp;color=%23969696&amp;auto_play=false&amp;hide_related=true&amp;show_comments=false&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=false">
+                                </iframe>
                             </div>
-                            <!-- <div class="music-player fade-up" style="animation-delay: 200ms;">
-                                <iframe width="100%" height="166" scrolling="no" frameborder="no"
-                                    allow="autoplay; encrypted-media"
-                                    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2338979225&color=%23969696&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false"></iframe>
-                            </div> -->
 
                             <p class="music-note fade-up" style="animation-delay: 240ms;">
-                                <a style="color: #848484; text-decoration: none;"
+                                <a style="color: #666666; text-decoration: none;"
                                     href="https://on.soundcloud.com/O3PH6AN1qWUQ1vjsFE" target="_blank"
                                     rel="noopener noreferrer">
                                     Follow me on SoundCloud
+                                </a>
                             </p>
                         </div>
                     </div>
@@ -293,12 +275,12 @@
                                 </a>
 
                                 <a class="fade-up" style="animation-delay: 340ms;"
-                                    href="./source/Joshua W. Riley - Resume.pdf" download>
+                                    href="./assets/Joshua%20W.%20Riley%20-%20Resume.pdf" download>
                                     resume
                                 </a>
 
-                                <a class="fade-up" style="animation-delay: 400ms;" data-cal-link="jsh-wll/30min"
-                                    data-cal-namespace="30min"
+                                <a class="fade-up" style="animation-delay: 400ms;" href="https://cal.com/jsh-wll/30min"
+                                    data-cal-link="jsh-wll/30min" data-cal-namespace="30min"
                                     data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>
                                     schedule
                                 </a>
@@ -322,56 +304,44 @@
                 </section>
                 <!-- End Not Found Section -->
             </main>
-            <!-- Footer -->
-            <footer class="site-footer" id="site-footer" aria-hidden="true">
-                <div class="footer-inner">
-                    <div class="footer-cluster">
-                        <div>
-                            <strong>Designed:</strong>
-                            <span>© 2026</span>
-                        </div>
-                    </div>
-
-                    <div class="footer-cluster">
-                        <a href="mailto:joshua.studio@proton.me">Business Email</a>
-                        <a href="./privacy.html">Privacy Policy</a>
-                        <a href="./terms.html">Terms of Use</a>
-                    </div>
-
-                    <div class="footer-cluster">
-                        <div>
-                            <strong>Built by:</strong>
-                            <span>Joshua W. Riley</span>
-                        </div>
+        </div>
+        <!-- Footer -->
+        <footer class="site-footer" id="site-footer" aria-hidden="true" inert>
+            <div class="footer-inner">
+                <div class="footer-cluster">
+                    <div>
+                        <strong>Designed:</strong>
+                        <span>© 2026</span>
                     </div>
                 </div>
-            </footer>
 
-            <button class="footer-toggle" type="button" aria-label="Open footer" aria-expanded="false"
-                aria-controls="site-footer">
-                <span class="footer-toggle-icon" aria-hidden="true">⌄</span>
-            </button>
+                <div class="footer-cluster">
+                    <!-- <a href="mailto:joshua.studio@proton.me">Business Email</a> -->
+                    <a href="./privacy.html">Privacy Policy</a>
+                    <a href="./terms.html">Terms of Use</a>
+                </div>
 
-            <div class="footer-dim" hidden></div>
-        </div>
+                <div class="footer-cluster">
+                    <div>
+                        <strong>Built by:</strong>
+                        <span>Joshua W. Riley</span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <button class="footer-toggle" type="button" aria-label="Open footer" aria-expanded="false"
+            aria-controls="site-footer">
+            <span class="footer-toggle-icon" aria-hidden="true">⌄</span>
+        </button>
+
+        <div class="footer-dim" hidden></div>
     </div>
-    <script src="./LoadingBar/loading-bar.js"></script>
-    <script src="./LoadingBar/loading-bar-time.js"></script>
-    <script src="./js/main.js"></script>
-    <script src="./js/footer.js"></script>
-    <script src="./js/nav.js"></script>
-    <script src="./js/sendEmail.js"></script>
-    <!-- Cal element-click embed code begins -->
-    <script type="text/javascript">
-        (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
-        Cal("init", "30min", { origin: "https://app.cal.com" });
-        // Important: Please add the following attributes to the element that should trigger the calendar to open upon clicking.
-        // `data-cal-link="jsh-wll/30min"`
-        // data-cal-namespace="30min"
-        // `data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'`
-        Cal.ns["30min"]("ui", { "hideEventTypeDetails": false, "layout": "month_view" });
-    </script>
-    <!-- Cal element-click embed code ends -->
+    <script src="./LoadingBar/loading-bar.min.js" defer></script>
+    <script src="./LoadingBar/loading-bar-time.js" defer></script>
+    <script src="./js/main.js" defer></script>
+    <script src="./js/footer.js" defer></script>
+    <script src="./js/sendEmail.js" defer></script>
 </body>
 
 </html>

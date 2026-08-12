@@ -1,6 +1,20 @@
 const pages = document.querySelectorAll('.page');
 const links = document.querySelectorAll('.nav-link');
 const pageOrder = ['home', 'about', 'music', 'updates', 'contact'];
+let calendarEmbedPromise;
+
+function loadCalendar() {
+    calendarEmbedPromise ??= import('./calendar.js').then(module => {
+        module.loadCalendarEmbed();
+    });
+}
+
+function loadSoundCloudPlayers() {
+    document.querySelectorAll('.music-player iframe[data-src]').forEach(iframe => {
+        iframe.src = iframe.dataset.src;
+        iframe.removeAttribute('data-src');
+    });
+}
 
 function isMobile() {
     return window.matchMedia('(max-width: 640px)').matches;
@@ -69,6 +83,14 @@ function showPage(id, updateUrl = true) {
     if (updateUrl) {
         history.pushState(null, '', `#${id}`);
     }
+
+    if (id === 'contact') {
+        loadCalendar();
+    }
+
+    if (id === 'music') {
+        loadSoundCloudPlayers();
+    }
 }
 
 links.forEach(link => {
@@ -86,6 +108,12 @@ const observer = new IntersectionObserver(entries => {
             const id = entry.target.id;
             updateNavState(id);
             history.replaceState(null, '', `#${id}`);
+            if (id === 'contact') {
+                loadCalendar();
+            }
+            if (id === 'music') {
+                loadSoundCloudPlayers();
+            }
         }
     });
 }, {

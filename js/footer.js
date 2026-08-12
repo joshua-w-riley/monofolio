@@ -9,6 +9,7 @@ function closeFooter() {
     footerDim.classList.remove("is-visible");
 
     footer.setAttribute("aria-hidden", "true");
+    footer.inert = true;
     footerToggle.setAttribute("aria-expanded", "false");
     footerToggle.setAttribute("aria-label", "Open footer");
     footerIcon.textContent = "⌄";
@@ -28,6 +29,7 @@ function openFooter() {
     });
 
     footer.setAttribute("aria-hidden", "false");
+    footer.inert = false;
     footerToggle.setAttribute("aria-expanded", "true");
     footerToggle.setAttribute("aria-label", "Close footer");
     footerIcon.textContent = "×";
