@@ -50,6 +50,7 @@
         document.documentElement.classList.add("js-loading");
     </script>
     <link rel="stylesheet" href="./css/site.min.css">
+    <link rel="stylesheet" href="./css/nav.css">
 </head>
 
 <body>
@@ -63,8 +64,8 @@
             <header class="main-content">
                 <a data-page="home" href="#home">
                     <h1 class="header">
-                        <span class="desktop-name">JO<span class="logo-colon">.</span>SH</span>
-                        <span class="mobile-name">JO<span class="logo-colon">.</span>SH</span>
+                        <span class="desktop-name">JOSHUA</span>
+                        <span class="mobile-name">JOSHUA</span>
                     </h1>
                 </a>
             </header>
@@ -74,9 +75,20 @@
                     <li class="mobile-only"><a href="#home" class="nav-link active"
                             data-page="home"><span>Home</span></a></li>
                     <li><a href="#about" class="nav-link" data-page="about"><span>About</span></a></li>
-                    <li><a href="#music" class="nav-link" data-page="music"><span>Music</span></a></li>
-                    <li><a href="#updates" class="nav-link" data-page="updates"><span>Updates</span></a></li>
                     <li><a href="#contact" class="nav-link" data-page="contact"><span>Contact</span></a></li>
+                    <li class="projects-nav">
+                        <button type="button" class="nav-link projects-toggle" aria-expanded="false"
+                            aria-controls="projects-dropdown">
+                            <span>Projects</span>
+                            <span class="project-chevron" aria-hidden="true">⌄</span>
+                        </button>
+                        <div id="projects-dropdown" class="projects-dropdown" hidden>
+                            <a href="#music" class="nav-link" data-page="music">Music</a>
+                            <!-- <a href="https://unknownarchives.com/" target="_blank" rel="noopener noreferrer">Unknown
+                                Archives</a> -->
+                        </div>
+                    </li>
+                    <!-- <li><a href="#updates" class="nav-link" data-page="updates"><span>Updates</span></a></li> -->
                 </ul>
             </nav>
         </div>

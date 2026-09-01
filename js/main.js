@@ -1,6 +1,8 @@
 const pages = document.querySelectorAll('.page');
-const links = document.querySelectorAll('.nav-link');
+const links = document.querySelectorAll('.nav-link[data-page]');
 const pageOrder = ['home', 'about', 'music', 'updates', 'contact'];
+const projectsToggle = document.querySelector('.projects-toggle');
+const projectsDropdown = document.getElementById('projects-dropdown');
 let calendarEmbedPromise;
 
 function loadCalendar() {
@@ -99,6 +101,42 @@ links.forEach(link => {
         showPage(link.dataset.page);
     });
 });
+
+if (projectsToggle && projectsDropdown) {
+    const closeProjectsDropdown = () => {
+        projectsDropdown.hidden = true;
+        projectsToggle.setAttribute('aria-expanded', 'false');
+    };
+
+    projectsToggle.addEventListener('click', e => {
+        e.preventDefault();
+        e.stopPropagation();
+
+        const isExpanded = projectsToggle.getAttribute('aria-expanded') === 'true';
+        projectsDropdown.hidden = isExpanded;
+        projectsToggle.setAttribute('aria-expanded', String(!isExpanded));
+    });
+
+    projectsDropdown.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', e => {
+            if (!link.dataset.page) {
+                closeProjectsDropdown();
+                return;
+            }
+
+            e.preventDefault();
+            showPage(link.dataset.page);
+            closeProjectsDropdown();
+        });
+    });
+
+    document.addEventListener('click', e => {
+        const target = e.target;
+        if (!projectsDropdown.hidden && !projectsToggle.contains(target) && !projectsDropdown.contains(target)) {
+            closeProjectsDropdown();
+        }
+    });
+}
 
 const observer = new IntersectionObserver(entries => {
     if (!isMobile()) return;
