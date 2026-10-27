@@ -49,6 +49,9 @@
     <script>
         document.documentElement.classList.add("js-loading");
     </script>
+    <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="./css/about.css">
+    <link rel="stylesheet" href="./css/systems.css">
     <link rel="stylesheet" href="./css/site.min.css">
     <link rel="stylesheet" href="./css/nav.css">
 </head>
@@ -91,64 +94,119 @@
                     <!-- <li><a href="#updates" class="nav-link" data-page="updates"><span>Updates</span></a></li> -->
                 </ul>
             </nav>
+            <!-- Systems Navigation: Only visible on Systems page -->
+            <div id="systems-nav" class="systems-nav" hidden>
+                <button type="button" class="systems-pill active" data-system="futrak"
+                        aria-pressed="true">
+                    Futrak
+                </button>
+                <button type="button" class="systems-pill" data-system="interactiveLearning"
+                        aria-pressed="false">
+                    Learning App
+                </button>
+                <button type="button" class="systems-pill" data-system="website"
+                        aria-pressed="false">
+                    Website
+                </button>
+            </div>
         </div>
         <div class="sub-content">
             <main class="subsection2">
                 <section id="home" class="page">
                     <div class="home-container">
                         <div class="manifesto-lock">
-                            <p class="home-text fade-up manifesto-line" style="animation-delay: 80ms;">
+                            <p id="manifesto-text" class="home-text fade-up manifesto-line" style="animation-delay: 80ms;">
                                 Working ≠ Usable.
                             </p>
-                            <p class="manifesto-author">
+                            <p class="manifesto-author fade-up" style="animation-delay: 100ms;">
                                 - JWR
                             </p>
                         </div>
+                        <!-- Disciplines -->
+                        <div class="home-disciplines fade-up"
+                            style="animation-delay: 240ms;">
+                            <span>Engineering</span>
+                            <span>Design</span>
+                            <span>Music</span>
+                            <span>Photography</span>
+                            <!-- <span>Ideas</span> -->
+                        </div>
+                        <!-- Explore -->
+                        <a href="#about"
+                        class="home-explore fade-up"
+                        data-page="about"
+                        style="animation-delay: 320ms;">
+                            Explore
+                            <span aria-hidden="true">↗</span>
+                        </a>
                     </div>
                 </section>
                 <!-- About Section -->
                 <section id="about" class="page about-page" hidden>
                     <div class="about-page-inner">
                         <div class="about-block">
-                            <p class="about-label">About</p>
-                            <h1 class="about-title fade-up">
-                                I build systems people trust.
-                            </h1>
-                            <div class="about-intro">
-                                <p class="fade-up" style="animation-delay: 80ms;">
-                                    Most problems start the same way: legacy logic,
-                                    unreliable data, unclear ownership, bloated
-                                    interfaces, and workflows that consume more time than they should.
-                                </p>
-                                <p class="closing fade-up tight" style="animation-delay: 160ms;">
-                                    I simplify them.
-                                </p>
-                                <div class="about-currently fade-up" style="animation-delay: 240ms;">
-                                    <p class="about-small-label">Currently</p>
-
-                                    <div class="currently-list">
-                                        <div class="currently-item">
-                                            <h2>
-                                                <a href="https://unknownarchives.com/" target="_blank"
-                                                    rel="noopener noreferrer">
-                                                    Unknown Archives
-                                                </a>
-                                            </h2>
-                                            <p>Building a product archive around language, clothing, and cultural
-                                                systems.</p>
-                                        </div>
-
-                                        <div class="currently-item">
-                                            <h2>Music</h2>
-                                            <p>Producing extended electronic tracks and simple visual systems around
-                                                them.</p>
-                                        </div>
-
-                                        <div class="currently-item">
-                                            <h2>Personal systems</h2>
-                                            <p>Designing cleaner tools, workflows, and interfaces for myself and
-                                                others.</p>
-                                        </div>
+                            <!-- Left Column: About -->
+                            <div class="about-primary">
+                                <p class="about-label">About</p>
+                                <h1 class="about-title fade-up">
+                                    <span class="title-line">I build systems</span>
+                                    <span class="title-line">people trust.</span>
+                                </h1>
+                                <div class="about-intro">
+                                    <p class="fade-up" style="animation-delay: 80ms;">
+                                        Most problems start the same way:
+                                    </p>
+                                    <ul class="about-problems fade-up" style="animation-delay: 120ms;">
+                                        <li>Legacy logic</li>
+                                        <li>Unreliable data</li>
+                                        <li>Unclear ownership</li>
+                                        <li>Bloated interfaces</li>
+                                        <li>Workflows that consume more time than they should</li>
+                                    </ul>
+                                    <p class="closing fade-up tight"
+                                    style="animation-delay: 160ms;">
+                                        I simplify them.
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- Right Column: Currently -->
+                            <div class="about-currently fade-up"
+                                style="animation-delay: 240ms;">
+                                <p class="about-small-label">Currently</p>
+                                <div class="currently-list">
+                                    <!-- Project 01 -->
+                                    <div class="currently-item">
+                                        <h2>
+                                            <a href="https://unknownarchives.com/"
+                                            target="_blank"
+                                            rel="noopener noreferrer">
+                                                ARCH
+                                            </a>
+                                        </h2>
+                                        <p>
+                                            Building a product archive around language,
+                                            clothing, and cultural systems.
+                                        </p>
+                                    </div>
+                                    <!-- Project 02 -->
+                                    <div class="currently-item">
+                                        <h2>Music</h2>
+                                        <p>
+                                            Producing extended electronic tracks and
+                                            simple visual systems around them.
+                                        </p>
+                                    </div>
+                                    <!-- Project 03 -->
+                                    <div class="currently-item">
+                                        <h2>Personal systems</h2>
+                                        <p>
+                                            Designing cleaner tools, workflows, and
+                                            interfaces for myself and others.
+                                        </p>
+                                        <a href="#systems" class="currently-view" data-page="systems">
+                                            View systems
+                                            <span aria-hidden="true">↗</span>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -156,20 +214,88 @@
                     </div>
                 </section>
                 <!-- End About Section -->
+                <!-- Start Systems Section -->
+                <section id="systems" class="page systems-page" hidden>
+                    <div class="systems-page-inner">
+                        <div class="systems-content">
+                            <div class="systems-card-shell">
+                                <article id="systems-card" class="systems-card step-1">
+                                    <div class="systems-card-top">
+                                        <p
+                                            id="systems-step-number"
+                                            class="systems-step-number">
+                                            01
+                                        </p>
+                                            <div class="systems-help">
+                                                <button
+                                                    type="button"
+                                                    class="systems-info-button"
+                                                    aria-label="Navigation instructions"
+                                                    aria-describedby="systems-info-tooltip">
+                                                    i
+                                                </button>
+                                                <div
+                                                    id="systems-info-tooltip"
+                                                    class="systems-info-tooltip">
+                                                    <p class="systems-help-title">Navigation</p>
+                                                    <p>← / → : Move between sections</p>
+                                                    <p>1–5 : Jump to a section</p>
+                                                    <p>Project pills : Switch case study</p>
+                                                </div>
+                                            </div>
+                                    </div>
+                                    <div id="systems-stage" aria-live="polite">
+                                        <div class="systems-panel active">
+                                            <p id="systems-category" class="systems-label"></p>
+                                            <h1 id="systems-title" class="systems-title"></h1>
+                                            <p id="systems-description" class="systems-description"></p>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="systems-pagination">
+                                <button
+                                    type="button"
+                                    id="systems-prev"
+                                    class="systems-page-button systems-page-button-prev"
+                                    aria-label="Previous section">
+                                    <span class="systems-page-arrow" aria-hidden="true">←</span>
+                                    <span class="systems-page-label"></span>
+                                </button>
+                                <div
+                                    id="systems-progress"
+                                    class="systems-progress"
+                                    role="group"
+                                    aria-label="Case study progress">
+                                    <span class="systems-dot"></span>
+                                    <span class="systems-dot"></span>
+                                    <span class="systems-dot"></span>
+                                    <span class="systems-dot"></span>
+                                    <span class="systems-dot"></span>
+                                </div>
+                                <button
+                                    type="button"
+                                    id="systems-next"
+                                    class="systems-page-button systems-page-button-next"
+                                    aria-label="Next section">
+                                    <span class="systems-page-label"></span>
+                                    <span class="systems-page-arrow" aria-hidden="true">→</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- End Systems Section -->
                 <!-- Music Section -->
                 <section id="music" class="page music-page" hidden>
                     <div class="music-page-inner">
                         <div class="music-block">
                             <p class="music-label">Music</p>
-
-                            <p class="music-intro fade-up" style="animation-delay: 80ms;">
-                                From the upcoming EP.
-                            </p>
                             <div class="music-player fade-up" style="animation-delay: 160ms;">
-                                <iframe title="SoundCloud audio player" width="100%" height="166" loading="lazy"
+                                <!-- <iframe title="SoundCloud audio player" width="100%" height="166" loading="lazy"
                                     allow="autoplay; encrypted-media"
                                     data-src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2358523865&amp;color=%23212121&amp;auto_play=false&amp;hide_related=true&amp;show_comments=false&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=false">
-                                </iframe>
+                                </iframe> -->
 
                                 <iframe title="SoundCloud audio player" width="100%" height="166" loading="lazy"
                                     allow="autoplay; encrypted-media"
@@ -189,7 +315,7 @@
                 </section>
                 <!-- End Music Section -->
                 <!-- Updates Section -->
-                <section id="updates" class="page updates-page" hidden>
+                <!-- <section id="updates" class="page updates-page" hidden>
                     <div class="updates-page-inner">
                         <div class="updates-block">
                             <p class="updates-label">Updates</p>
@@ -204,7 +330,6 @@
 
                             <form class="updates-form fade-up" action="PASTE_KIT_FORM_ACTION_URL_HERE" method="post"
                                 style="animation-delay: 160ms;">
-                                <!-- Paste Kit hidden inputs here only -->
 
                                 <label class="sr-only" for="updates-email">Email address</label>
 
@@ -254,20 +379,19 @@
                             </div>
                         </div>
                     </div>
-                </section>
+                </section> -->
                 <!-- End Updates Section -->
                 <!-- Contact Section -->
                 <section id="contact" class="page contact-page" hidden>
                     <div class="contact-page-inner">
                         <div class="contact-block">
                             <p class="contact-label">Contact</p>
-
                             <h1 class="contact-title fade-up">
                                 Let's talk.
                             </h1>
 
                             <p class="contact-intro fade-up" style="animation-delay: 80ms;">
-                                Available for systems, product, design, and creative collaborations.
+                                Available for systems solutions, product, design, brainstorming and creative collaborations.
                             </p>
 
                             <div class="contact-links">
@@ -275,22 +399,18 @@
                                     href="mailto:joshua.studio@proton.me" onclick="sendEmail(event)">
                                     email
                                 </a>
-
                                 <a class="fade-up" style="animation-delay: 220ms;" rel="noopener noreferrer"
                                     href="https://github.com/joshua-w-riley" target="_blank">
                                     github
                                 </a>
-
                                 <a class="fade-up" style="animation-delay: 280ms;" rel="noopener noreferrer"
                                     href="https://www.linkedin.com/in/joshua-w-riley/" target="_blank">
                                     linkedin
                                 </a>
-
                                 <a class="fade-up" style="animation-delay: 340ms;"
                                     href="./assets/Joshua%20W.%20Riley%20-%20Resume.pdf" download>
                                     resume
                                 </a>
-
                                 <a class="fade-up" style="animation-delay: 400ms;" href="https://cal.com/jsh-wll/30min"
                                     data-cal-link="jsh-wll/30min" data-cal-namespace="30min"
                                     data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>
@@ -352,7 +472,9 @@
     <script src="./LoadingBar/loading-bar.min.js" defer></script>
     <script src="./LoadingBar/loading-bar-time.js" defer></script>
     <script src="./js/main.js" defer></script>
+    <script src="./js/manifesto.js" defer></script>
     <script src="./js/footer.js" defer></script>
+    <script src="./js/systems.js" defer></script>
     <script src="./js/sendEmail.js" defer></script>
 </body>
 

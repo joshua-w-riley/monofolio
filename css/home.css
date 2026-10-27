@@ -7,17 +7,46 @@
     justify-content: center;
 }
 
+#home .sub-content {
+    align-items: center;
+    justify-content: center;
+}
+
 .home-container {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
+/* .manifesto-lock {
+    width: fit-content;
+    max-width: 100%;
+} */
+
 .manifesto-lock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: fit-content;
     max-width: 100%;
 }
+
+/* .manifesto-line {
+    margin: 0;
+    font-size: clamp(2.75rem, 5vw, 5rem);
+    font-weight: 600;
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+    color: #1d1d1fcd;
+    animation: pageReveal 0.45s ease-out forwards;
+    animation-delay: 0.1s;
+    white-space: nowrap;
+    white-space: normal;
+    text-wrap: balance;
+    text-align: center;
+} */
 
 .manifesto-line {
     margin: 0;
@@ -27,7 +56,6 @@
     letter-spacing: -0.04em;
     color: #1d1d1fcd;
     animation: pageReveal 0.45s ease-out forwards;
-    animation-delay: 0.1s;
     white-space: nowrap;
 }
 
@@ -42,6 +70,78 @@
     text-transform: uppercase;
     text-align: right;
 }
+
+/* ========================================
+   DISCIPLINES
+======================================== */
+
+.home-disciplines {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px 12px;
+    font-size: clamp(.50rem, 1.2vw, 1.2rem);
+    color: rgba(29, 29, 31, 0.5);
+    margin-top: 42px;
+    font-weight: 500;
+    letter-spacing: 0.10em;
+    line-height: 1.5;
+    text-transform: uppercase;
+    color: #888;
+}
+
+.home-disciplines span {
+    white-space: nowrap;
+}
+
+.home-disciplines span:not(:last-child)::after {
+    content: "/";
+    margin-left: 12px;
+    color: #bbb;
+}
+
+/* ========================================
+   EXPLORE
+======================================== */
+
+.home-explore {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    width: fit-content;
+    margin-top: 28px;
+    color: rgba(29, 29, 31, 0.72);
+    font-size: 1.15rem;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+
+    text-decoration: none;
+    color: #666;
+
+    transition: color 0.25s ease;
+}
+
+.home-explore:hover {
+    color: #1d1d1f;
+}
+
+.home-explore span {
+    display: inline-block;
+    transition: transform 0.25s ease;
+}
+
+.home-explore:hover span {
+    transform: translate(3px, -3px);
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
 
 @media (max-width: 640px) {
     #home {
@@ -62,6 +162,23 @@
     .manifesto-author {
         width: 100%;
         text-align: right;
+    }
+
+    .home-disciplines {
+        max-width: 320px;
+        margin: 36px auto 0;
+        gap: 8px 10px;
+        font-size: 0.62rem;
+        letter-spacing: 0.06em;
+    }
+
+    .home-disciplines span:not(:last-child)::after {
+        margin-left: 10px;
+    }
+
+    .home-explore {
+        margin-top: 24px;
+        font-size: 0.72rem;
     }
 }
 

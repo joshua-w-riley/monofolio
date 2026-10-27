@@ -20,20 +20,22 @@
     text-decoration: none;
 }
 
-.logo-colon {
+/* .logo-colon {
     display: inline-block;
     font-weight: 800;
     transform: translateY(-0.11em) scale(1.08);
-}
+} */
 
 .sub-navbar {
     list-style: none;
     padding: 0;
     margin: 0;
-    height: 100%;
+    height: 25%;
     display: flex;
     flex-direction: row;
+    align-items: center;
     gap: 12px;
+    /* background-color: #1a1a1a; */
 }
 
 .mobile-only {
@@ -46,10 +48,12 @@
     font-size: 0.95rem;
     font-weight: 500;
     text-transform: lowercase;
+    margin: 0;
     padding-left: 14px;
     position: relative;
     transition: color 0.28s ease, opacity 0.28s ease;
     letter-spacing: -0.02em;
+    line-height: 1.2;
 }
 
 .nav-link.active {
@@ -58,8 +62,8 @@
 
 .projects-nav {
     position: relative;
-    align-self: flex-start;
     height: fit-content;
+
 }
 
 .nav-link.projects-toggle {
@@ -73,7 +77,6 @@
     align-items: center;
     gap: 6px;
     border-radius: 0;
-    padding: 0 0 0 14px;
     margin: 0;
     color: #6a6a6a;
     cursor: pointer;
@@ -82,7 +85,9 @@
     font-family: inherit;
     line-height: normal;
     text-transform: lowercase;
+    line-height: 1.2;
     letter-spacing: -0.02em;
+    /* background-color: red; */
 }
 
 .nav-link.projects-toggle:focus,
@@ -95,7 +100,7 @@
 .nav-link.projects-toggle .project-chevron {
     display: inline-block;
     font-size: 0.72em;
-    line-height: 1;
+    line-height: 1.2;
     transform: translateY(-1px);
     transition: transform 0.2s ease;
 }
