@@ -1,4 +1,4 @@
-# i-am-joshua.com
+# (https://www.joshwill.work)
 
 A personal website, creative system, frontend project, and archive for Joshua W. Riley.
 
@@ -6,7 +6,7 @@ Built as a minimal, single-page web experience using HTML, CSS, and vanilla Java
 
 ## Live Site
 
-https://i-am-joshua.com
+[https://www.joshwill.work]
 
 ## Overview
 
